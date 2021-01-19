@@ -1,0 +1,69 @@
+#logInSite{
+    width: 375px;
+}
+
+#logInSite h1{
+    color: #341931;
+    margin-left: 25px;
+    margin-top: 32px;
+    margin-bottom: 178px;
+}
+.logInForm{
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    margin: 0 auto;    
+}
+
+
+
+.inputText{
+    margin-bottom: 26px;
+    border-bottom: #341931 3px solid;
+    border-radius: 0%;
+    width: 325px;
+}
+
+.inputText input{
+    border: none;
+}
+
+.inputText i{
+    margin-left: 7.935em;
+}
+
+
+.submitLogIn{
+    text-transform: uppercase;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: #341931 3px solid;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.touch{
+    background-color: #FF1168;
+    width: 75px;
+    height: 75px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.fa-fingerprint{
+    font-size: 35px;
+}
+
+.oneTouch{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 12px;
+}
