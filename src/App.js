@@ -1,11 +1,14 @@
 import './App.css';
 import LogIn from './pages/LogIn';
+import Walkthrough1 from './pages/Walkthrough1';
+import { Router } from "@reach/router";
 
 function App() {
   return (
-    <div className="App">
-      <LogIn />
-    </div>
+    <Router className="App">
+      <LogIn path="/" />
+      <Walkthrough1 path="/Walkthrough1.html" />
+    </Router>
   );
 }
 

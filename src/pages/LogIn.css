@@ -28,8 +28,17 @@
     border: none;
 }
 
-.inputText i{
-    margin-left: 7.935em;
+ion-icon[name="person-circle-outline"], ion-icon[name="key"] {
+    margin-left: 5.8em;
+    font-size: 21px;
+}
+
+ion-icon[name="key"]{
+    transform: rotate(90deg);
+}
+
+ion-icon[name="finger-print-outline"]{
+    font-size: 40px;
 }
 
 

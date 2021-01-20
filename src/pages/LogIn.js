@@ -5,17 +5,17 @@ export default function LogIn() {
     return(
         <article id="logInSite">
             <h1>Log In</h1>
-            <form className="logInForm">
+            <form className="logInForm" action="Walkthrough1.html">
                 <label htmlFor="username">Username</label>
                 <div className="inputText">
                 <input type="text" placeholder="Enter your username"/>
-                <i class="fas fa-user"></i>
+                <ion-icon name="person-circle-outline"></ion-icon>
                 </div>
 
                 <label htmlFor="password">Password</label>
                 <div className="inputText">
                 <input type="text" placeholder="Enter your password" />
-                <i class="fas fa-key"></i>
+                <ion-icon name="key"></ion-icon>
                 </div>
 
                 <input className="submitLogIn" type="submit" value="log in"/>
@@ -24,7 +24,7 @@ export default function LogIn() {
         <section className="touchSection">
 
         <div className="touch">
-             <i class="fas fa-fingerprint"></i>
+        <ion-icon name="finger-print-outline"></ion-icon>
         </div>
              <p className="oneTouch">One-Touch LogIn</p>
 
