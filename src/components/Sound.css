@@ -8,7 +8,7 @@
     border-radius: 50px;
 }
 
-.music_background ion-icon[name="radio-outline"], .music_background ion-icon[name="heart"]{
+.music_background ion-icon[name="radio-outline"], .music_background ion-icon[name="heart"], .music_background ion-icon[name="musical-note"]{
     font-size: 42px;
     color: #341931;
 }
@@ -16,7 +16,7 @@
 
 
 
-.current_background ion-icon[name="radio-outline"]{
+.current_background ion-icon[name="radio-outline"], .current_background ion-icon[name="heart"]{
     font-size: 42px;
     color: white;
 }

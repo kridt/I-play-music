@@ -1,5 +1,7 @@
 import React from "react";
 import Heart from "../components/Heart";
+import HeartCurrent from "../components/HeartCurrent";
+import Node from "../components/Node";
 import Music from "../components/Sound";
 import MusicCurrent from "../components/SoundCurrent";
 import "./Walkthrough1.css";
@@ -23,6 +25,8 @@ export default function Walkthrough1() {
                 <Music />
                 <MusicCurrent />
                 <Heart />
+                <HeartCurrent />
+                <Node />
             </section>
 
         </section>
