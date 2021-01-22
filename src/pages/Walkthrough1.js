@@ -1,8 +1,6 @@
 import React from "react";
 import Heart from "../components/Heart";
-import HeartCurrent from "../components/HeartCurrent";
 import Node from "../components/Node";
-import Music from "../components/Sound";
 import MusicCurrent from "../components/SoundCurrent";
 import "./Walkthrough1.css";
 
@@ -11,7 +9,7 @@ export default function Walkthrough1() {
     return(
         <section className="Walkthrough1">
             <div className="bigPicture1">
-                <img src="./images/asset_3.png" alt="background"/>
+                <img src="./images/walkthrough_2.svg" alt="background"/>
             </div>
 
             <div className="textInfo_walkthrough1">
@@ -22,13 +20,14 @@ export default function Walkthrough1() {
         
             <section className="walkthrough_breadcrum"> 
                 
-                <Music />
                 <MusicCurrent />
                 <Heart />
-                <HeartCurrent />
                 <Node />
             </section>
 
+        <div className="skip">
+            <a link="#">skip</a>
+        </div>
         </section>
     )
 }

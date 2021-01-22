@@ -16,7 +16,7 @@
 
 
 
-.current_background ion-icon[name="radio-outline"], .current_background ion-icon[name="heart"]{
+.current_background ion-icon[name="radio-outline"], .current_background ion-icon[name="heart"], .current_background ion-icon[name="musical-note"]{
     font-size: 42px;
     color: white;
 }
