@@ -3,6 +3,7 @@ import Heart from "../components/Heart";
 import Node from "../components/Node";
 import MusicCurrent from "../components/SoundCurrent";
 import "./Walkthrough1.css";
+import { Link } from "@reach/router";
 
 export default function Walkthrough1() {
 
@@ -21,12 +22,12 @@ export default function Walkthrough1() {
             <section className="walkthrough_breadcrum"> 
                 
                 <MusicCurrent />
-                <Heart />
+               <Link to="/Walkthrough2"><Heart /></Link> 
                 <Node />
             </section>
 
         <div className="skip">
-            <a link="#">skip</a>
+            <Link to="/Featured">skip</Link>
         </div>
         </section>
     )

@@ -1,0 +1,13 @@
+.undercategoryName{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1.6em;
+    margin-right: 1em;
+    margin-bottom: 26px;
+    display: none;
+}
+
+.undercategoryName ion-icon{
+    font-size: 1.4em;
+}
+

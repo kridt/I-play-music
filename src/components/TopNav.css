@@ -1,0 +1,25 @@
+.featured_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured_header h1{
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.featured_header ion-icon{
+    font-size: 25px;
+}
+
+.featured_gradiant{
+    display: inline-block;
+    color: rgb(238,9,121);
+    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 26px;
+    margin-top: 20px;
+    font-size: 2.1em;
+}
