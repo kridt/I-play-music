@@ -1,0 +1,30 @@
+.album{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 325px;
+}
+
+.album_info{
+    display: flex;
+}
+
+.album_cover_img{
+    margin-right: 10px;
+}
+
+.songCounter p{
+    font-size: 12px;
+}
+
+.albumName{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.artistName{
+    font-size: 12px;
+}
+.album:last-child{
+    margin-bottom: 70px;
+}

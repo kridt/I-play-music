@@ -9,3 +9,10 @@
 .categories_article{
     margin: 25px;
 }
+.categoriesList{
+    margin-bottom: 5em;
+}
+
+.albumLink{
+    text-decoration: none;
+}
