@@ -1,0 +1,22 @@
+.playlistSongWrapper{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.playlistSongWrapper i{
+    margin-right: 20px;
+    padding: 15px;
+    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
+    border-radius: 50px;
+    color: white;
+}
+.songText h3{
+    font-size: 15px;
+    width: 200px;
+}
+.songText p, .time{
+    font-size: 12px;
+}
+.time{
+    margin-left: 20px;
+}

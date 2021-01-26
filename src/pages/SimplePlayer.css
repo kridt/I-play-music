@@ -1,0 +1,95 @@
+.SimplePlayerWrapper{
+        overflow: hidden;
+        font-family: 'Poppins', sans-serif;
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 20px 27px 0 27px;
+        color: #341931;
+        text-align: center;
+}
+.playerGrid{
+    display: grid;
+    justify-content: center;
+
+}
+.playerGrid img{
+    grid-area: 1/1/2/2;
+    justify-self: center;
+    align-self: center;
+}
+.timeRange{
+    border: none;
+    height: 3px;
+    background-color: #FF1168;
+}
+.timeRange{
+    margin-top: 40px;
+    -webkit-appearance: none;
+    background: transparent;
+    height: 4px;
+    width: 100%;
+    background: rgb(238,9,121);
+    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
+    cursor: pointer;
+}
+.timeRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #FF1168;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(255, 15, 103, 0.35);
+}
+.timeRange::-ms-track {
+    width: 100%;
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+}
+.timeRange:focus {
+    outline: none;
+}
+.timeRange::-ms-thumb {
+    width: 12px;
+    height: 12px;
+    background-color: #FF1168;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(255, 15, 103, 0.35);
+}
+.timeRange::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background-color: #FF1168;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(255, 15, 103, 0.35);
+}
+.timeDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.mainPlayer{
+    margin-top: 50px;
+}
+.playerUl{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+    font-size: 20px;
+}
+.play{
+    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 30px;
+}
+.fa-step-backward, .fa-step-forward{
+    color: rgb(238,9,121);
+    background-image: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}

@@ -1,0 +1,23 @@
+.CardImage{
+    border-radius: 5px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25);
+}
+.CardWrapper{
+    display: grid;
+}
+.CardWrapper img, div{
+    grid-area: 1/1/2/2;
+}
+.CardWrapper div{
+    width: 300px;
+    color: white;
+    align-self: flex-end;
+    margin: 0 0 30px 10px;
+}
+.CardWrapper div h2{
+    font-size: 32px;
+}
+.CardWrapper div p{
+    margin-top: 10px;
+    font-size: 12px;
+}

@@ -6,7 +6,8 @@ export default function TopNav({pageName, color, h1}) {
     return(
         <>
         <header className="featured_header">
-                <ion-icon style={{color:color}} name="chevron-back-outline"></ion-icon>
+               
+        <button className="back" onClick={() => window.history.back()}> <ion-icon style={{color:color}} name="chevron-back-outline"></ion-icon></button>
                 <h1 style={{color:color}}>{pageName}</h1>
                 <ion-icon style={{color:color}} name="search-outline"></ion-icon>
             </header>

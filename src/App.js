@@ -6,6 +6,8 @@ import Walkthrough2 from './pages/Walkthrough2';
 import Featured from './pages/Featured';
 import Categories from './pages/Categories';
 import Albums from './pages/Albums';
+import SimplePlayer from "./pages/SimplePlayer";
+import Playlists from './pages/Playlists';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Featured path="/Featured" />
       <Categories path="/Categories"/>
       <Albums path="/Albums" />
+      <SimplePlayer path="/SimplePlayer" />
+      <Playlists path="/Playlists" />
     </Router>
   );
 }

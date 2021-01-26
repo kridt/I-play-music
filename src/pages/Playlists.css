@@ -1,0 +1,46 @@
+.gallery img:first-child, .gallery img:last-child{
+    transform: scale(0.75);
+}
+.gallery img:nth-child(2){
+    margin: 0 40px;
+}
+.gallery{
+    margin-top: 20px;
+    display: flex;
+    justify-self: center;
+    transform: translateX(-110px);
+}
+.PlaylistWrapper{
+        overflow: hidden;
+        font-family: 'Poppins', sans-serif;
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 20px 27px 0 27px;
+        color: #341931;
+}
+.PlaylistWrapper h2{
+    font-size: 20px;
+    text-align: center;
+    width: 125px;
+    margin: 0 auto;
+}
+.songsDiv{
+    margin-bottom: 86px;
+}
+.listenButton{
+    border: solid 3px #FF1168;
+    border-radius: 50px;
+    background-color: white;
+    width: 323px;
+    padding: 1em 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #FF1168;
+    text-align: center;
+}
+.listenDiv{
+    display: grid;
+    margin-top: 2em;
+}
