@@ -8,6 +8,8 @@
     grid-area: 1/1/-1/-1;
     border-radius: 8px;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: auto;
 }
 
 .music_card_text{
@@ -20,7 +22,15 @@
 .music_card_text h1{
     font-size: 2em;
 }
+.linkToPlaylist{
+    text-decoration: none;
 
+}
 .music_card_text p{
     font-size: 12px;
+}
+.gradient{
+            border-radius: 8px;
+            grid-area: 1/1/-1/-1;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%);
 }
