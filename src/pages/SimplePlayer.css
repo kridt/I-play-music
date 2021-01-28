@@ -93,3 +93,19 @@
     -webkit-text-fill-color: transparent;
     display: inline;
 }
+
+.record--playing {
+    animation: rotate 2s linear infinite;
+}
+.record--stop{
+    animation: rotate 2s linear infinite;
+    animation-play-state: paused;
+}
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}

@@ -10,6 +10,7 @@
     justify-self: center;
     transform: translateX(-110px);
 }
+
 .PlaylistWrapper{
         overflow: hidden;
         font-family: 'Poppins', sans-serif;

@@ -17,34 +17,61 @@ export default function Playlists(props) {
 			headers: {
 				"Authorization": "Bearer " + token.access_token
 			}
-		})
+        })
+
 		.then(response => setContent(response.data));
 	}, [token, setContent, playlistId]);
 
-console.log(content);
-  return (
-    <div className="PlaylistWrapper">
+
+
+
+
+
+
+
+
+    var [token2] = useContext(TokenContext);
+	var [content2, setContent2] = useState({});
+    var playlistId2 = new URLSearchParams(props.location.search).get("id")
+	useEffect(function() {
+		axios.get(`https://api.spotify.com/v1/playlists/${playlistId}`, {
+			headers: {
+				"Authorization": "Bearer " + token.access_token
+			}
+        })
+
+		.then(response => setContent2(response.data));
+	}, [token2, setContent2, playlistId2]);
+
+
+    
+    return (
+        <div className="PlaylistWrapper">
         <TopNav pageName="Playlists" pageH1="Playlists"/>
             <div className="gallery">
                 <img src="https://via.placeholder.com/155x155" alt=""/>
                 <img src="https://via.placeholder.com/155x155" alt=""/>
                 <img src="https://via.placeholder.com/155x155" alt=""/>
             </div>
-            <h2>Top 50 Rock Ballads</h2>
+
+            
+
+            <h2>{content2.name}</h2>
             <div className="songsDiv">
 
                 {content.items && content.items.map(function(result){
+        
                     console.log(result);
                     var songLength = (result.track.duration_ms/1000)/60
                     return(
-                        <PlaylistSong time={songLength.toFixed(2)} songName={result.track.name} artistName={result.track.artists[0].name} />
+                        <PlaylistSong key={result.track.id} id={result.track.id} time={songLength.toFixed(2)} songName={result.track.name} artistName={result.track.artists[0].name} key={result.track.id} />
 
                     )
                 })}
 
                 
                 <div className="listenDiv">
-                    <Link to="#" className="listenButton">LISTEN ALL</Link>
+                    <button className="listenButton">LISTEN ALL</button>
                 </div>
             </div>
         <BotNav />

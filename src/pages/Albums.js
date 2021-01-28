@@ -2,9 +2,27 @@ import Album from "../components/Album";
 import BotNav from "../components/BotNav";
 import TopNav from "../components/TopNav";
 import "./Albums.css";
+import { useContext, useEffect, useState } from "react";
+import TokenContext from "../TokenContext";
+import axios from "axios";
 
-export default function Albums() {
+export default function Albums(props) {
 
+
+    var [token] = useContext(TokenContext);
+	var [content, setContent] = useState({});
+    var albumsId = new URLSearchParams(props.location.search).get("id")
+	useEffect(function() {
+		axios.get(`https://api.spotify.com/v1/playlists/${albumsId}/playlists`, {
+			headers: {
+				"Authorization": "Bearer " + token.access_token
+			}
+        })
+
+		.then(response => setContent(response.data));
+	}, [token, setContent, albumsId]);
+
+        
     return(
         <article className="albums_article">
             <TopNav h1="All Albums" pageName="Music"/>
