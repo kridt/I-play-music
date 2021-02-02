@@ -1,30 +1,9 @@
 import TopNav from "../components/TopNav";
 import "./SimplePlayer.css";
-import { useContext, useEffect, useState } from "react";
-import TokenContext from "../TokenContext";
-import axios from "axios";
 
-export default function SimplePlayer(props) {
 
-     
+export default function SimplePlayerCurrentSong() {
 
-        var [token] = useContext(TokenContext);
-        var [content, setContent] = useState({});
-        var songId = new URLSearchParams(props.location.search).get("song");
-        var songLength = (content.duration_ms/1000)/60;
-        useEffect(function() {
-            axios.get(`https://api.spotify.com/v1/tracks/${songId}`, {
-                headers: {
-                    "Authorization": "Bearer " + token.access_token
-                }
-            })
-    
-            .then(response => setContent(response.data));
-        }, [token, setContent, songId]);
-
-        console.log(content);
-
-        
         function playThatShit() {
             var audio = document.querySelector("audio");
             var play = document.querySelector(".play");
@@ -48,33 +27,26 @@ export default function SimplePlayer(props) {
         }
 
 
+        var currentSongPlaying = localStorage.getItem("currentSongPlaying"); 
+        var songPlay = JSON.parse(currentSongPlaying)
         
 
-        var currentSongPlaying = {
-            "name":`${content.name}`,
-            "artists":`${content.artists && content.artists[0].name}`,
-            "musicUrl":`${content.preview_url}`,
-            "lengthOfSong":`${songLength.toFixed(2)}`
-        };
-        localStorage.setItem("currentSongPlaying", JSON.stringify(currentSongPlaying));    
-
   return (
-      
-    <div className="SimplePlayerWrapper">
+      <div className="SimplePlayerWrapper">
         <TopNav pageName="Playing"/>
         <div className="playerGrid">
             <img src="./images/sound-wave.png" alt=""/>
             <img className="record" src="./images/player.png" alt=""/>
         </div>
         <section className="mainPlayer">
-            <h2>{content.name}</h2>
-            <p>{content.artists && content.artists[0].name}</p>
+            <h2>{songPlay.name}</h2>
+            <p>{songPlay.artists}</p>
             <div>
                 <input className="timeRange" type="range"/>
-                <audio src={content.preview_url} type="audio/mp3" />
+                <audio src={songPlay.musicUrl} type="audio/mp3" />
                 <div className="timeDiv">
                     <p>0.00</p>
-                    <p>{songLength.toFixed(2)}</p>
+                    <p>{songPlay.lengthOfSong}</p>
                 </div>
             </div>
         </section>

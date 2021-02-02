@@ -1,15 +1,28 @@
-.gallery img:first-child, .gallery img:last-child{
-    transform: scale(0.75);
+.gallery img{
+    width: 100px;
+    margin-right: 2em;
 }
-.gallery img:nth-child(2){
-    margin: 0 40px;
+
+.activePlaylist img{
+    width: 155px;
 }
+
 .gallery{
     margin-top: 20px;
+    position: relative;
+    right: 26px;
     display: flex;
-    justify-self: center;
-    transform: translateX(-110px);
+    align-items: center;
+    width: 375px;
+    overflow: scroll;
 }
+.baggrundsblob{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 
 .PlaylistWrapper{
         overflow: hidden;
@@ -18,11 +31,11 @@
         margin: 0 auto;
         padding: 20px 27px 0 27px;
         color: #341931;
+        position: relative;
 }
 .PlaylistWrapper h2{
     font-size: 20px;
     text-align: center;
-    width: 125px;
     margin: 0 auto;
 }
 .songsDiv{

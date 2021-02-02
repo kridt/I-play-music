@@ -19,3 +19,4 @@ export default function Album({ img_cover, album_name, artist, songCount }) {
         </section>
     )
 }
+//ændring

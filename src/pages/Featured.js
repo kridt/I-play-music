@@ -31,7 +31,7 @@ export default function Featured() {
                     {content.playlists&&content.playlists.items.map(function(result){
                         
                         return(
-                            <MusicCard img={result.images[0].url} h1={result.name} p={result.description} id={result.id} key={result.id} />                    
+                            <MusicCard img={result.images[0].url} h1={result.name} p={result.description} featured_id={result.id} key={result.id} />                    
                             )
                     })}       
                 </div>
