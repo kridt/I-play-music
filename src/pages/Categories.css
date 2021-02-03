@@ -13,6 +13,10 @@
     margin-bottom: 5em;
 }
 
+.categoriesList a{
+    text-decoration: none;
+}
+
 .albumLink{
     text-decoration: none;
 }

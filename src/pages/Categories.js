@@ -11,7 +11,7 @@ import axios from "axios";
 export default function Categories() {
 
 
-    /* var [token] = useContext(TokenContext);
+     var [token] = useContext(TokenContext);
 	var [content, setContent] = useState({});
 	useEffect(function() {
 		axios.get(`https://api.spotify.com/v1/browse/categories`, {
@@ -20,25 +20,23 @@ export default function Categories() {
 			}
         })
 
-		.then(response => setContent(response.data));
+		.then(response => setContent(response.data.categories));
 	}, [token, setContent]);
 
-    console.log(content.categories);
- */
+ 
     return(
         <article className="categories_article">
             <TopNav pageName="Categories" h1="Categories"/>
+            
+            <section className="categoriesList">
+                 {content.items?.map(function(result) {
 
-
-            <article className="categoriesList">
-              {/*  {content.categories.items && content.categories.items.map(function(result) {
-
-                    console.log();
+                   
                 return(
-                    <Category categoryName={result.name} color="#D70060" id={result.id}/> 
+                    <Category categoryName={result.name} color="#000000" id={result.id}/> 
                     
                     ) 
-                })}   */}
+                })} 
 
                {/*  <Link className="albumLink" to="/Albums"><Category categoryName="Blues" color="#E54028"/></Link>   
              <Link className="albumLink" to="/Albums"><Category categoryName="Classical" color="#F18D05"/></Link>   
@@ -48,7 +46,7 @@ export default function Categories() {
              <Link className="albumLink" to="/Albums"><Category categoryName="Fitness &amp; Workout" color="#0ABEBE"/></Link>   
              <Link className="albumLink" to="/Albums"><Category categoryName="Hip-Hop/Rap" color="#00A1CB"/></Link>   
              <Link className="albumLink" to="/Albums"><Category categoryName="Industrial" color="#115793"/></Link> */}   
-            </article>
+            </section>
 
             <BotNav />
         </article>

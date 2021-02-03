@@ -1,8 +1,11 @@
+import { Link } from "@reach/router";
 import "./Album.css";
 
-export default function Album({ img_cover, album_name, artist, songCount }) {
-
+export default function Album({ img_cover, album_name, artist, songCount, id }) {
+        
     return(
+
+        <Link to={"/Album/" + id}>
         <section className="album">
         <div className="album_info">
             <div className="album_cover_img">
@@ -14,9 +17,11 @@ export default function Album({ img_cover, album_name, artist, songCount }) {
             </div>
         </div>
         <div className="songCounter">
-            <p>{songCount} Songs</p>
+            <p>{songCount}</p>
         </div>
         </section>
+        </Link>
+    
+    
     )
 }
-//ændring

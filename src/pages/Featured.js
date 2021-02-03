@@ -28,7 +28,7 @@ export default function Featured() {
             <TopNav pageName="featured" color="#341931" h1="Featured" />
             <main>
                 <div className="featured_music">
-                    {content.playlists&&content.playlists.items.map(function(result){
+                    {content.playlists && content.playlists.items.map(function(result){
                         
                         return(
                             <MusicCard img={result.images[0].url} h1={result.name} p={result.description} featured_id={result.id} key={result.id} />                    

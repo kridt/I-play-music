@@ -9,7 +9,7 @@ import axios from "axios";
 export default function Albums(props) {
 
 
-    var [token] = useContext(TokenContext);
+    /* var [token] = useContext(TokenContext);
 	var [content, setContent] = useState({});
     var albumsId = new URLSearchParams(props.location.search).get("id")
 	useEffect(function() {
@@ -20,8 +20,21 @@ export default function Albums(props) {
         })
 
 		.then(response => setContent(response.data));
-	}, [token, setContent, albumsId]);
+    }, [token, setContent, albumsId]); */
+    
+    var [token] = useContext(TokenContext);
+	var [albums, setAlbums] = useState({});
 
+	useEffect(function() {
+		axios.get("https://api.spotify.com/v1/browse/new-releases", {
+			headers: {
+				"Authorization": "Bearer " + token.access_token
+			}
+		})
+		.then(response => setAlbums(response.data.albums));
+	}, [token, setAlbums]);
+
+console.log(albums.items);
         
     return(
         <article className="albums_article">
@@ -50,10 +63,20 @@ export default function Albums(props) {
             <p className="viewAll">View All</p>
             </div>
             <div className="albumsList">
-                <Album songCount="12" img_cover="https://via.placeholder.com/50" album_name="Old Town Road" artist="Billy Ray Cyrus"  />
-                <Album songCount="8" img_cover="https://via.placeholder.com/50" album_name="Victory Lab" artist="Nipsey Hussle"  />
-                <Album songCount="12" img_cover="https://via.placeholder.com/50" album_name="Thank U, Next" artist="Ariana Grande"  />
-                <Album songCount="11" img_cover="https://via.placeholder.com/50" album_name="Death Race For Love" artist="Juice WRLD"  />
+
+                {albums.items?.map(function(result) {
+
+                    var songs = "songs";
+                    if (result.total_tracks < 2){
+                        songs = "song"
+                    }
+
+                    return(
+                        <Album songCount={result.total_tracks + " " + songs} id={result.id} img_cover={result.images[0].url} album_name={result.name} artist={result.artists[0].name}  />
+
+                    )
+                    })}
+                
             </div>
 
             <BotNav />

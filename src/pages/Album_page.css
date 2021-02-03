@@ -1,0 +1,26 @@
+.album_page{
+    padding: 12px;
+}
+
+.album_info{
+    display: grid;
+    color: white;
+}
+
+.album_info_text{
+    position: relative;
+    bottom: 360px;
+}
+
+.background_img{
+    width: 375px;
+}
+
+.background_img img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 84px;
+    z-index: -1;
+}
+

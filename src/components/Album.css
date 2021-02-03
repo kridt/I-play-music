@@ -11,6 +11,18 @@
 
 .album_cover_img{
     margin-right: 10px;
+    max-width: 50px;
+
+}
+
+.album_cover_img img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.songCounter{
+    width: 50px;
 }
 
 .songCounter p{

@@ -12,6 +12,7 @@ import Callback from './pages/Callback';
 import SimplePlayerCurrentSong from "./pages/SimplePlayerCurrentSong";
 import TokenContext from "./TokenContext";
 import { useState } from 'react';
+import Album from './pages/Album_page';
 
 function App() {
   var tokenState = useState(null);
@@ -34,6 +35,8 @@ function App() {
                 <SimplePlayerCurrentSong path="/SimplePlayerCurrentSong" />
                 <Playlists path="/Playlists" />
                 <Playlists path="/Playlists/:id" />
+                <Album path="/Album" />
+                <Album path="/Album/:id" />
 
             </>
           )
