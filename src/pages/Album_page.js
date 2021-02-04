@@ -3,6 +3,8 @@ import "./Album_page.css";
 import { useContext, useEffect, useState } from "react";
 import TokenContext from "../TokenContext";
 import axios from "axios";
+import PlaylistSong from "../components/PlaylistSong";
+import BotNav from "../components/BotNav";
 
 export default function Album_page(props) {
 
@@ -18,7 +20,6 @@ export default function Album_page(props) {
             .then(response => setAlbum(response.data));
     }, [token, setAlbum]);
 
-    console.log(album);
 
     var song = "Song";
     if (album.total_tracks > 1) {
@@ -36,7 +37,23 @@ export default function Album_page(props) {
                 <h1>{album.name}</h1>
                 <p>{album.total_tracks + " " + song}</p>
                 </div>
+
+                <div className="album_page_playlist">
+                <h2>All Songs</h2>
+
+                {album.tracks && album.tracks.items.map(function(result){
+                        console.log(result);
+                        return(
+
+                            <PlaylistSong id={result.id} songName={result.name} time={result.duration_ms} artistName={result.artists[0].name} /> 
+                        )
+                })} 
+
+                </div>
+                
             </article>
+
+            <BotNav />
         </section>
     )
 }

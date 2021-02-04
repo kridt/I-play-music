@@ -7,20 +7,6 @@ import TokenContext from "../TokenContext";
 import axios from "axios";
 
 export default function Albums(props) {
-
-
-    /* var [token] = useContext(TokenContext);
-	var [content, setContent] = useState({});
-    var albumsId = new URLSearchParams(props.location.search).get("id")
-	useEffect(function() {
-		axios.get(`https://api.spotify.com/v1/playlists/${albumsId}/playlists`, {
-			headers: {
-				"Authorization": "Bearer " + token.access_token
-			}
-        })
-
-		.then(response => setContent(response.data));
-    }, [token, setContent, albumsId]); */
     
     var [token] = useContext(TokenContext);
 	var [albums, setAlbums] = useState({});

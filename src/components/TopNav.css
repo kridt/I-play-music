@@ -1,6 +1,8 @@
 .featured_header{
     display: flex;
     justify-content: space-between;
+    margin-left: 26px;
+    margin-right: 26px;
 }
 
 .featured_header h1{

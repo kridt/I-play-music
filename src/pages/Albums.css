@@ -1,7 +1,16 @@
 .albums_article{
     margin: 25px;
 }
-
+.albumsList a{
+    text-decoration: none;
+}
+.album_name{
+    color: black;
+}
+.albumName{
+    font-size: 12px;
+    width: 250px;
+}
 .albums{
     display: flex;
     width: 375px;
