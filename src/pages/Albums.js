@@ -5,6 +5,7 @@ import "./Albums.css";
 import { useContext, useEffect, useState } from "react";
 import TokenContext from "../TokenContext";
 import axios from "axios";
+import { Link } from "@reach/router";
 
 export default function Albums(props) {
     
@@ -36,9 +37,15 @@ console.log(albums.items);
                     <p className="viewAll">View All</p>
                 </div>
                 <div className="albums">
-                    <img src="https://via.placeholder.com/130" alt="placeholder"/>
-                    <img src="https://via.placeholder.com/130" alt="placeholder"/>
-                    <img src="https://via.placeholder.com/130" alt="placeholder"/>
+                     {albums.items?.map(function(result){
+                         
+                         return(
+                             <Link to={"/Album/" + result.id}>
+                             <img className="albums_img" src={result.images[0].url} alt={result.name} />
+                             </Link>
+
+                         )
+                    })}
                 </div>
             </div>
 

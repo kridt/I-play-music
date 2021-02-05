@@ -5,17 +5,16 @@
     width: 325px;
 }
 
-.album_info{
+.album_info_album_page{
     display: flex;
 }
 
-.album_cover_img{
-    margin-right: 10px;
-    max-width: 50px;
-
+.album_name_album_page{
+    position: relative;
+    left: 1em;
 }
 
-.album_cover_img img{
+.album_cover_img_album_page img{
     width: 100%;
     height: auto;
     border-radius: 4px;

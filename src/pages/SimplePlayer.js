@@ -11,7 +11,6 @@ export default function SimplePlayer(props) {
         var [token] = useContext(TokenContext);
         var [content, setContent] = useState({});
         var songId = new URLSearchParams(props.location.search).get("song");
-        var songLength = (content.duration_ms/1000)/60;
         useEffect(function() {
             axios.get(`https://api.spotify.com/v1/tracks/${songId}`, {
                 headers: {
@@ -47,16 +46,12 @@ export default function SimplePlayer(props) {
 
         }
 
-
+        function msToMinutesAndSeconds(ms) {
+            var minutes = Math.floor(ms / 60000);
+            var seconds = ((ms % 60000) / 1000).toFixed(0);
+            return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+        }
         
-
-        var currentSongPlaying = {
-            "name":`${content.name}`,
-            "artists":`${content.artists && content.artists[0].name}`,
-            "musicUrl":`${content.preview_url}`,
-            "lengthOfSong":`${songLength.toFixed(2)}`
-        };
-        localStorage.setItem("currentSongPlaying", JSON.stringify(currentSongPlaying));    
 
   return (
       
@@ -74,7 +69,7 @@ export default function SimplePlayer(props) {
                 <audio src={content.preview_url} type="audio/mp3" />
                 <div className="timeDiv">
                     <p>0.00</p>
-                    <p>{songLength.toFixed(2)}</p>
+                    <p>{msToMinutesAndSeconds(content.duration_ms)}</p>
                 </div>
             </div>
         </section>

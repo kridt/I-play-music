@@ -21,6 +21,12 @@ export default function Album_page(props) {
     }, [token, setAlbum]);
 
 
+    function msToMinutesAndSeconds(ms) {
+        var minutes = Math.floor(ms / 60000);
+        var seconds = ((ms % 60000) / 1000).toFixed(0);
+        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    }
+
     var song = "Song";
     if (album.total_tracks > 1) {
         song = "Songs"
@@ -45,7 +51,7 @@ export default function Album_page(props) {
                         console.log(result);
                         return(
 
-                            <PlaylistSong id={result.id} songName={result.name} time={result.duration_ms} artistName={result.artists[0].name} /> 
+                            <PlaylistSong id={result.id} songName={result.name} time={msToMinutesAndSeconds(result.duration_ms)} artistName={result.artists[0].name} /> 
                         )
                 })} 
 
