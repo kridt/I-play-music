@@ -1,46 +1,46 @@
-.textInfo_walkthrough1{
-    text-align: center;
-    color: #341931;
+.textInfo_walkthrough1 {
+  text-align: center;
+  color: #341931;
 }
 
-.bigPicture1{
-    position: relative;
-    bottom: 60px;
-    right: 41px;
-    width: 416px;
-    overflow: hidden;
+.bigPicture1 {
+  position: relative;
+  bottom: 60px;
+  right: 41px;
+  width: 416px;
+  overflow: hidden;
 }
 
-.textInfo_walkthrough1 h1{
-    max-width: 230px;
-    margin: 0 auto;
-    font-size: 24px;
+.textInfo_walkthrough1 h1 {
+  max-width: 230px;
+  margin: 0 auto;
+  font-size: 24px;
 }
-.textInfo_walkthrough1 p{
-    max-width: 325px;
-    margin: 0 auto;
-    font-size: 15px;
-    
-}
-
-.walkthrough_breadcrum{
-    display: flex;
-    margin-left: 55px;
-    margin-top: 34px;
+.textInfo_walkthrough1 p {
+  max-width: 325px;
+  margin: 0 auto;
+  font-size: 15px;
 }
 
-.walkthrough_breadcrum .music_background, .walkthrough_breadcrum .current_background{
-    margin-right: 20px;
+.walkthrough_breadcrum {
+  display: flex;
+  margin-left: 55px;
+  margin-top: 34px;
 }
 
-.skip{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+.walkthrough_breadcrum .music_background,
+.walkthrough_breadcrum .current_background {
+  margin-right: 20px;
 }
 
-.skip a{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
+.skip {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.skip a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
 }

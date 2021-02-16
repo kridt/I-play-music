@@ -1,60 +1,59 @@
-.gallery img{
-    width: 100px;
-    margin-right: 2em;
+.gallery img {
+  width: 100px;
+  margin-right: 2em;
 }
 
-.activePlaylist img{
-    width: 155px;
+.activePlaylist img {
+  width: 155px;
 }
 
-.gallery{
-    margin-top: 20px;
-    position: relative;
-    right: 26px;
-    display: flex;
-    align-items: center;
-    width: 375px;
-    overflow: scroll;
+.gallery {
+  margin-top: 20px;
+  position: relative;
+  right: 26px;
+  display: flex;
+  align-items: center;
+  width: 375px;
+  overflow: scroll;
 }
-.baggrundsblob{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.baggrundsblob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-
-.PlaylistWrapper{
-        overflow: hidden;
-        font-family: 'Poppins', sans-serif;
-        max-width: 375px;
-        margin: 0 auto;
-        padding: 20px 27px 0 27px;
-        color: #341931;
-        position: relative;
+.PlaylistWrapper {
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 20px 27px 0 27px;
+  color: #341931;
+  position: relative;
 }
-.PlaylistWrapper h2{
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
+.PlaylistWrapper h2 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
 }
-.songsDiv{
-    margin-bottom: 86px;
+.songsDiv {
+  margin-bottom: 86px;
 }
-.listenButton{
-    border: solid 3px #FF1168;
-    border-radius: 50px;
-    background-color: white;
-    width: 323px;
-    padding: 1em 0;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color: #FF1168;
-    text-align: center;
+.listenButton {
+  border: solid 3px #ff1168;
+  border-radius: 50px;
+  background-color: white;
+  width: 323px;
+  padding: 1em 0;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #ff1168;
+  text-align: center;
 }
-.listenDiv{
-    display: grid;
-    margin-top: 2em;
+.listenDiv {
+  display: grid;
+  margin-top: 2em;
 }

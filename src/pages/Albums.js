@@ -8,71 +8,73 @@ import axios from "axios";
 import { Link } from "@reach/router";
 
 export default function Albums(props) {
-    
-    var [token] = useContext(TokenContext);
-	var [albums, setAlbums] = useState({});
+  var [token] = useContext(TokenContext);
+  var [albums, setAlbums] = useState({});
 
-	useEffect(function() {
-		axios.get("https://api.spotify.com/v1/browse/new-releases", {
-			headers: {
-				"Authorization": "Bearer " + token.access_token
-			}
-		})
-		.then(response => setAlbums(response.data.albums));
-	}, [token, setAlbums]);
+  useEffect(
+    function () {
+      axios
+        .get("https://api.spotify.com/v1/browse/new-releases", {
+          headers: {
+            Authorization: "Bearer " + token.access_token,
+          },
+        })
+        .then((response) => setAlbums(response.data.albums));
+    },
+    [token, setAlbums]
+  );
 
-console.log(albums.items);
-        
-    return(
-        <article className="albums_article">
-            <TopNav h1="All Albums" pageName="Music"/>
+  console.log(albums.items);
 
-            <section className="all_albums_section">
+  return (
+    <article className="albums_article">
+      <TopNav h1="All Albums" pageName="Music" />
 
-            <div className="featured_albums">
-                
-                
-                <div className="info_featured_albums">
-                    <p>Featured Albums</p>
-                    <p className="viewAll">View All</p>
-                </div>
-                <div className="albums">
-                     {albums.items?.map(function(result){
-                         
-                         return(
-                             <Link to={"/Album/" + result.id}>
-                             <img className="albums_img" src={result.images[0].url} alt={result.name} />
-                             </Link>
-
-                         )
-                    })}
-                </div>
-            </div>
-
-
-            </section>
-            <div className="new_releases">
-            <p className="new_release">New Releases</p>
+      <section className="all_albums_section">
+        <div className="featured_albums">
+          <div className="info_featured_albums">
+            <p>Featured Albums</p>
             <p className="viewAll">View All</p>
-            </div>
-            <div className="albumsList">
+          </div>
+          <div className="albums">
+            {albums.items?.map(function (result) {
+              return (
+                <Link to={"/Album/" + result.id}>
+                  <img
+                    className="albums_img"
+                    src={result.images[0].url}
+                    alt={result.name}
+                  />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <div className="new_releases">
+        <p className="new_release">New Releases</p>
+        <p className="viewAll">View All</p>
+      </div>
+      <div className="albumsList">
+        {albums.items?.map(function (result) {
+          var songs = "songs";
+          if (result.total_tracks < 2) {
+            songs = "song";
+          }
 
-                {albums.items?.map(function(result) {
+          return (
+            <Album
+              songCount={result.total_tracks + " " + songs}
+              id={result.id}
+              img_cover={result.images[0].url}
+              album_name={result.name}
+              artist={result.artists[0].name}
+            />
+          );
+        })}
+      </div>
 
-                    var songs = "songs";
-                    if (result.total_tracks < 2){
-                        songs = "song"
-                    }
-
-                    return(
-                        <Album songCount={result.total_tracks + " " + songs} id={result.id} img_cover={result.images[0].url} album_name={result.name} artist={result.artists[0].name}  />
-
-                    )
-                    })}
-                
-            </div>
-
-            <BotNav />
-        </article>
-    )
+      <BotNav />
+    </article>
+  );
 }

@@ -1,51 +1,47 @@
-import './App.css';
-import LogIn from './pages/LogIn';
-import Walkthrough1 from './pages/Walkthrough1';
+import "./App.css";
+import LogIn from "./pages/LogIn";
+import Walkthrough1 from "./pages/Walkthrough1";
 import { Router } from "@reach/router";
-import Walkthrough2 from './pages/Walkthrough2';
-import Featured from './pages/Featured';
-import Categories from './pages/Categories';
-import Albums from './pages/Albums';
+import Walkthrough2 from "./pages/Walkthrough2";
+import Featured from "./pages/Featured";
+import Categories from "./pages/Categories";
+import Albums from "./pages/Albums";
 import SimplePlayer from "./pages/SimplePlayer";
-import Playlists from './pages/Playlists';
-import Callback from './pages/Callback';
+import Playlists from "./pages/Playlists";
+import Callback from "./pages/Callback";
 import SimplePlayerCurrentSong from "./pages/SimplePlayerCurrentSong";
 import TokenContext from "./TokenContext";
-import { useState } from 'react';
-import Album from './pages/Album_page';
+import { useState } from "react";
+import Album from "./pages/Album_page";
 
 function App() {
   var tokenState = useState(null);
-  
-  return (
 
+  return (
     <TokenContext.Provider value={tokenState}>
       <Router className="App">
-      {
-        (function() {
+        {(function () {
           if (tokenState[0]?.access_token)
-          return(
-            <>
+            return (
+              <>
                 <Walkthrough1 path="/Walkthrough1.html" />
                 <Walkthrough2 path="/Walkthrough2.html" />
                 <Featured path="/Featured" />
-                <Categories path="/Categories"/>
+                <Categories path="/Categories" />
                 <Albums path="/Albums" />
-                <SimplePlayer path="/SimplePlayer" />
+                <SimplePlayer path="/SimplePlayer/:song" />
                 <SimplePlayerCurrentSong path="/SimplePlayerCurrentSong" />
                 <Playlists path="/Playlists" />
                 <Playlists path="/Playlists/:id" />
                 <Album path="/Album" />
                 <Album path="/Album/:id" />
+              </>
+            );
+        })()}
 
-            </>
-          )
-        }())
-      }
-
-      <Callback path="/callback" />
-      <LogIn default />
-    </Router>
+        <Callback path="/callback" />
+        <LogIn default />
+      </Router>
     </TokenContext.Provider>
   );
 }

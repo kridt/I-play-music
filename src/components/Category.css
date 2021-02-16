@@ -1,22 +1,22 @@
-.categoryName{
-    color: white;
-    max-width: 325px;
-    height: 54px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
-    border-radius: 8px;
-    margin-bottom: 16px;
+.categoryName {
+  color: white;
+  max-width: 325px;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
-.categoryName h1{
-    font-size: 15px;
-    font-size: bold;
-    text-decoration: none
+.categoryName h1 {
+  font-size: 15px;
+  font-size: bold;
+  text-decoration: none;
 }
 
-.categoryName i{
-    font-size: 22px;
+.categoryName i {
+  font-size: 22px;
 }

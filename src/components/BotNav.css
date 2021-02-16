@@ -1,31 +1,31 @@
-.botUl{
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    align-items: center;
-    height: 60px;
+.botUl {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  height: 60px;
 }
 
-.botUl li{
-    font-size: 20px;
-    list-style: none;
-    margin-right: 2.5em;
+.botUl li {
+  font-size: 20px;
+  list-style: none;
+  margin-right: 2.5em;
 }
 
-.botLi{
-    color: black;
+.botLi {
+  color: black;
 }
 
-.music{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
-    border-radius: 50px;
-    color: white;
-    }
+.music {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  border-radius: 50px;
+  color: white;
+}

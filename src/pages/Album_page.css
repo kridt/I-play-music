@@ -1,41 +1,38 @@
-
-
-.album_info{
-    display: grid;
-    color: white;
+.album_info {
+  display: grid;
+  color: white;
 }
 
-.album_info_text{
-    position: relative;
-    bottom: 360px;
-    margin-left: 26px;
+.album_info_text {
+  position: relative;
+  bottom: 360px;
+  margin-left: 26px;
 }
 
-.background_img{
-    width: 375px;
+.background_img {
+  width: 375px;
 }
 
-.background_img img{
-    width: 100%;
-    height: auto;
-    position: relative;
-    bottom: 84px;
-    z-index: -1;
+.background_img img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  bottom: 84px;
+  z-index: -1;
 }
 
-.album_tracks{
-    color: black;
+.album_tracks {
+  color: black;
 }
 
-.album_info h2{
-    color: black;
-    font-size: 15px;
+.album_info h2 {
+  color: black;
+  font-size: 15px;
 }
 
-
-.album_page_playlist{
-    color: black;
-    margin-left: 26px;
-    position: relative;
-    bottom: 100px;
+.album_page_playlist {
+  color: black;
+  margin-left: 26px;
+  position: relative;
+  bottom: 100px;
 }

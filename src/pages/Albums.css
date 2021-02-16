@@ -1,55 +1,56 @@
-.albums_article{
-    margin: 25px;
+.albums_article {
+  margin: 25px;
 }
-.albumsList a{
-    text-decoration: none;
+.albumsList a {
+  text-decoration: none;
 }
-.album_name{
-    color: black;
+.album_name {
+  color: black;
 }
-.albumName{
-    font-size: 12px;
-    width: 250px;
+.albumName {
+  font-size: 12px;
+  width: 250px;
 }
-.albums{
-    display: flex;
-    width: 375px;
-    overflow: scroll;
-    position: relative;
-    right: 25px;
-    padding-left: 25px;
-}
-
-.albums_img{
-    max-width: 130px;
-    border-radius: 8px;
-    margin-right: 15px;
-    width: 100%;
-    height: auto;
+.albums {
+  display: flex;
+  width: 375px;
+  overflow: scroll;
+  position: relative;
+  right: 25px;
+  padding-left: 25px;
 }
 
-.info_featured_albums{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
+.albums_img {
+  max-width: 130px;
+  border-radius: 8px;
+  margin-right: 15px;
+  width: 100%;
+  height: auto;
 }
 
-.info_featured_albums:first-child, .new_release{
-    font-size: 15px;
-    font-weight: bold;
+.info_featured_albums {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
 }
 
-.new_releases{
-    margin-top: 36px;
+.info_featured_albums:first-child,
+.new_release {
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.viewAll{
-    font-size: 15px;
-    color: #FF1168;
-    font-weight: normal;
+.new_releases {
+  margin-top: 36px;
 }
 
-.new_releases{
-    display: flex;
-    justify-content: space-between;
+.viewAll {
+  font-size: 15px;
+  color: #ff1168;
+  font-weight: normal;
+}
+
+.new_releases {
+  display: flex;
+  justify-content: space-between;
 }
