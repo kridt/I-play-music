@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
+    "cross-env": "^7.0.3",
     "node-sass": "^5.0.0",
     "querystring": "^0.2.0",
     "react": "^17.0.1",
@@ -19,7 +20,7 @@
     "dev": "netlify dev -f .netlify/functions",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier --write ."
   },
@@ -50,7 +51,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit":[ 
+      "pre-commit": [
         "lint-staged",
         "npm test"
       ]
