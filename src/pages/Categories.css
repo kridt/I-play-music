@@ -1,22 +1,22 @@
 .mic {
-  color: black;
+	color: black;
 }
 
 .pulse {
-  color: #ee0979;
+	color: #ee0979;
 }
 
 .categories_article {
-  margin: 25px;
+	margin: 25px;
 }
 .categoriesList {
-  margin-bottom: 5em;
+	margin-bottom: 5em;
 }
 
 .categoriesList a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .albumLink {
-  text-decoration: none;
+	text-decoration: none;
 }

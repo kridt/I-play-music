@@ -1,41 +1,41 @@
 .album {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 24px;
-  width: 325px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 24px;
+	width: 325px;
 }
 
 .album_info_album_page {
-  display: flex;
+	display: flex;
 }
 
 .album_name_album_page {
-  position: relative;
-  left: 1em;
+	position: relative;
+	left: 1em;
 }
 
 .album_cover_img_album_page img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+	width: 100%;
+	height: auto;
+	border-radius: 4px;
 }
 
 .songCounter {
-  width: 50px;
+	width: 50px;
 }
 
 .songCounter p {
-  font-size: 12px;
+	font-size: 12px;
 }
 
 .albumName {
-  font-size: 15px;
-  font-weight: bold;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 .artistName {
-  font-size: 12px;
+	font-size: 12px;
 }
 .album:last-child {
-  margin-bottom: 70px;
+	margin-bottom: 70px;
 }

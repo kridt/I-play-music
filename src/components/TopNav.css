@@ -1,32 +1,32 @@
 .featured_header {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 26px;
-  margin-right: 26px;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 26px;
+	margin-right: 26px;
 }
 
 .featured_header h1 {
-  font-size: 20px;
-  font-weight: 200;
-  text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 200;
+	text-transform: uppercase;
 }
 .featured_header ion-icon {
-  font-size: 25px;
+	font-size: 25px;
 }
 
 .featured_gradiant {
-  display: inline-block;
-  color: rgb(238, 9, 121);
-  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 26px;
-  margin-top: 20px;
-  font-size: 2.1em;
+	display: inline-block;
+	color: rgb(238, 9, 121);
+	background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 26px;
+	margin-top: 20px;
+	font-size: 2.1em;
 }
 
 .back {
-  border: none;
-  background-color: transparent;
+	border: none;
+	background-color: transparent;
 }

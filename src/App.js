@@ -14,36 +14,40 @@ import TokenContext from "./TokenContext";
 import { useState } from "react";
 import Album from "./pages/Album_page";
 
+
 function App() {
-  var tokenState = useState(null);
+	var tokenState = useState(null);
 
-  return (
-    <TokenContext.Provider value={tokenState}>
-      <Router className="App">
-        {(function () {
-          if (tokenState[0]?.access_token)
-            return (
-              <>
-                <Walkthrough1 path="/Walkthrough1.html" />
-                <Walkthrough2 path="/Walkthrough2.html" />
-                <Featured path="/Featured" />
-                <Categories path="/Categories" />
-                <Albums path="/Albums" />
-                <SimplePlayer path="/SimplePlayer/:song" />
-                <SimplePlayerCurrentSong path="/SimplePlayerCurrentSong" />
-                <Playlists path="/Playlists" />
-                <Playlists path="/Playlists/:id" />
-                <Album path="/Album" />
-                <Album path="/Album/:id" />
-              </>
-            );
-        })()}
+	return (
+		<TokenContext.Provider value={tokenState}>
+			<Router className="App">
+				{(function () {
+					if (tokenState[0]?.access_token)
+						return (
+							<>
+								
 
-        <Callback path="/callback" />
-        <LogIn default />
-      </Router>
-    </TokenContext.Provider>
-  );
+								<Walkthrough1 path="/Walkthrough1.html" />
+								<Walkthrough2 path="/Walkthrough2.html" />
+								<Featured path="/Featured" />
+								<Categories path="/Categories" />
+								<Albums path="/Albums" />
+								<SimplePlayer path="/SimplePlayer/:song" />
+								<SimplePlayerCurrentSong path="/SimplePlayerCurrentSong" />
+								<Playlists path="/Playlists" />
+								<Playlists path="/Playlists/:id" />
+								<Album path="/Album" />
+								<Album path="/Album/:id" />
+								
+							</>
+						);
+				})()}
+
+				<Callback path="/callback" />
+				<LogIn default />
+			</Router>
+		</TokenContext.Provider>
+	);
 }
 
 export default App;

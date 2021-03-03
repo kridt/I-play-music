@@ -1,76 +1,76 @@
 #logInSite {
-  width: 375px;
+	width: 375px;
 }
 
 #logInSite h1 {
-  color: #341931;
-  margin-left: 25px;
-  margin-top: 32px;
-  margin-bottom: 178px;
+	color: #341931;
+	margin-left: 25px;
+	margin-top: 32px;
+	margin-bottom: 178px;
 }
 .logInForm {
-  display: flex;
-  flex-direction: column;
-  max-width: 325px;
-  margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	max-width: 325px;
+	margin: 0 auto;
 }
 
 .inputText {
-  margin-bottom: 26px;
-  border-bottom: #341931 3px solid;
-  border-radius: 0%;
-  width: 325px;
+	margin-bottom: 26px;
+	border-bottom: #341931 3px solid;
+	border-radius: 0%;
+	width: 325px;
 }
 
 .inputText input {
-  border: none;
+	border: none;
 }
 
 ion-icon[name="person-circle-outline"],
 ion-icon[name="key"] {
-  margin-left: 5.8em;
-  font-size: 21px;
+	margin-left: 5.8em;
+	font-size: 21px;
 }
 
 ion-icon[name="key"] {
-  transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 ion-icon[name="finger-print-outline"] {
-  font-size: 40px;
+	font-size: 40px;
 }
 
 .submitLogIn {
-  text-transform: uppercase;
-  height: 60px;
-  background-color: transparent;
-  border-radius: 50px;
-  border: #341931 3px solid;
-  font-size: 15px;
-  font-weight: bold;
+	text-transform: uppercase;
+	height: 60px;
+	background-color: transparent;
+	border-radius: 50px;
+	border: #341931 3px solid;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 .touch {
-  background-color: #ff1168;
-  width: 75px;
-  height: 75px;
-  color: white;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 50px;
-  margin: 0 auto;
-  margin-top: 50px;
+	background-color: #ff1168;
+	width: 75px;
+	height: 75px;
+	color: white;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 50px;
+	margin: 0 auto;
+	margin-top: 50px;
 }
 
 .fa-fingerprint {
-  font-size: 35px;
+	font-size: 35px;
 }
 
 .oneTouch {
-  font-size: 15px;
-  text-align: center;
-  margin-top: 12px;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
 }
