@@ -4,20 +4,14 @@ import querystring from "querystring";
 
 export default function LogIn() {
 
-	var url = window.location.host;
+	var url = window.location.href;
 	console.log(url);
-	var uri_url = ""
 
-	if(url === "localhost:8888") {
-		uri_url = "http://localhost:8888/callback"
-	} else{
-		uri_url= "https://i-playmusic-kridt.netlify.app/callback"
-	}
 	var queryParameters = querystring.stringify({
 		response_type: "code",
 		client_id: "0739246590d94c2e9daa8311e7b697d8",
 		scope: "user-read-private user-read-email",
-		redirect_uri: uri_url,
+		redirect_uri: `${url}callback`,
 		state: "vdjldfglfdlgrpoiaer9garlogihlgkzhdrlgishlro8tubzpdortuzorihglzdoighzoirhtlzo8ghldhglzdghlzdoigh",
 	});
 
