@@ -17,7 +17,7 @@ export default function LogIn() {
 		response_type: "code",
 		client_id: "0739246590d94c2e9daa8311e7b697d8",
 		scope: "user-read-private user-read-email",
-		redirect_uri: "http://localhost:8888/callback",
+		redirect_uri: uri_url,
 		state: "vdjldfglfdlgrpoiaer9garlogihlgkzhdrlgishlro8tubzpdortuzorihglzdoighzoirhtlzo8ghldhglzdghlzdoigh",
 	});
 
