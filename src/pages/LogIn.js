@@ -6,13 +6,13 @@ export default function LogIn() {
 
 	var url = window.location.host;
 	console.log(url);
+	var uri_url = ""
 
 	if(url === "localhost:8888") {
 		uri_url = "http://localhost:8888/callback"
 	} else{
 		uri_url= "https://i-playmusic-kridt.netlify.app/callback"
 	}
-	var uri_url = ""
 	var queryParameters = querystring.stringify({
 		response_type: "code",
 		client_id: "0739246590d94c2e9daa8311e7b697d8",
