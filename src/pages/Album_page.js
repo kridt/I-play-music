@@ -20,7 +20,7 @@ export default function Album_page(props) {
 				})
 				.then(response => setAlbum(response.data));
 		},
-		[token, setAlbum]
+		[token, setAlbum, props.id]
 	);
 
 	function msToMinutesAndSeconds(ms) {
@@ -38,7 +38,7 @@ export default function Album_page(props) {
 			<TopNav pageName={album?.album_type} color="#fff" />
 			<article className="album_info">
 				<div className="background_img">
-					<img src={album.images && album.images[0].url} />
+					<img src={album.images && album.images[0].url} alt="" />
 				</div>
 				<div className="album_info_text">
 					<h1>{album.name}</h1>

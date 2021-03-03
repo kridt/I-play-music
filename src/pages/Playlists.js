@@ -12,7 +12,8 @@ export default function Playlists(props) {
 	var [token] = useContext(TokenContext);
 	var [playlist, setPlaylist] = useState({});
 	var [playlists, setPlaylists] = useState([]);
-	var [featured, setFeatured] = useState([]);
+	var featuredState = useState([]);
+	var setFeatured = featuredState[1];
 
 	useEffect(
 		function () {
@@ -61,7 +62,7 @@ export default function Playlists(props) {
 	return (
 		<div className="PlaylistWrapper">
 			<div className="baggrundsblob">
-				<img src="../images/slimey.png" />
+				<img src="../images/slimey.png" alt="" />
 			</div>
 			<TopNav
 				pageName="Playlists"
@@ -95,7 +96,7 @@ export default function Playlists(props) {
 				{playlist.items &&
 					playlist.items.map(function (result) {
 						
-						throw new Error("tada")
+						/* throw new Error("tada") */
 						return (
 							<ErrorBoundary>
 
@@ -105,7 +106,6 @@ export default function Playlists(props) {
 								time={msToMinutesAndSeconds(result.track?.duration_ms)}
 								songName={result.track.name}
 								artistName={result.track.artists[0].name}
-								key={result.track.id}
 								/>
 								</ErrorBoundary>
 						);

@@ -3,7 +3,6 @@ import BotNav from "../components/BotNav";
 import Category from "../components/Category";
 import TopNav from "../components/TopNav";
 import "./Categories.css";
-import { Link } from "@reach/router";
 import { useContext, useEffect, useState } from "react";
 import TokenContext from "../TokenContext";
 import axios from "axios";
