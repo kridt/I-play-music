@@ -43,7 +43,7 @@ export default function LogIn() {
 				<div className="touch">
 					<ion-icon name="finger-print-outline"></ion-icon>
 				</div>
-				<p className="oneTouch">One-Touch LogIn</p>
+				<p className="oneTouch">One-Touch LuyigduhvcfdxuydvfvfdbuhfgvduivfdguhkvfdguuyifvdgfvdbgfuhogIn</p>
 			</section>
 		</article>
 	);
