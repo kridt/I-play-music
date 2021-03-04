@@ -11,7 +11,9 @@ export default function LogIn() {
 		response_type: "code",
 		client_id: "0739246590d94c2e9daa8311e7b697d8",
 		scope: "user-read-private user-read-email",
-		redirect_uri: `${url}callback`,
+		redirect_uri: process.env.NODE_ENV === "production"
+		? "https://i-playmusic-kridt.netlify.app/callback"
+		: "http://localhost:8888/callback",
 		state: "vdjldfglfdlgrpoiaer9garlogihlgkzhdrlgishlro8tubzpdortuzorihglzdoighzoirhtlzo8ghldhglzdghlzdoigh",
 	});
 
