@@ -45,7 +45,7 @@ export default function Albums(props) {
 							);
 						})}
 					</div>   
-				</div>
+				</div>   
 			</section>
 			<div className="new_releases">
 				<p className="new_release">New Releases</p>
